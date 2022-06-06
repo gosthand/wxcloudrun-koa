@@ -15,6 +15,19 @@ router.get("/", async (ctx) => {
   ctx.body = homePage;
 });
 
+router.post("/foo/bar", async (ctx) => {
+  const { request } = ctx;
+  const { action } = request.body;
+  console.log(request,action)
+
+});
+router.get("/foo/bar", async (ctx) => {
+  const { request } = ctx;
+  const { action } = request.body;
+  console.log(request,action)
+
+});
+
 // 更新计数
 router.post("/api/count", async (ctx) => {
   const { request } = ctx;
